@@ -1,3 +1,11 @@
+Save only works after clicking equals
+
+This was done up in approx 2-3 hours so there are defintely going to be holes in it.
+
+
+
+
+
 # vuex-grid-calculator
 
 > Testing the CSS grid with a bootstrap alternative

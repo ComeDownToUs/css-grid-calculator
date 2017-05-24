@@ -1,0 +1,7 @@
+export const FETCH_RESULTS  = 'calc/FETCH_RESULTS'
+export const UPDATE_CURRENT = 'calc/UPDATE_CURRENT'
+export const SAVE_RESULT    = 'calc/SAVE_RESULT'
+export const DELETE_RESULT  = 'calc/DELETE_RESULT'
+export const GET_RESULT     = 'calc/GET_RESULT'
+export const CANCEL_RESULT  = 'calc/CANCEL_RESULT'
+export const CALC_ERROR     = 'calc/ERROR'

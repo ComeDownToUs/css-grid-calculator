@@ -1,13 +1,30 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <div class="row">
+      <div class="col-md-12">
+        <result-bar></result-bar>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-9 col-sm-12">
+        <router-view></router-view>
+      </div>
+      <div class="col-md-3 col-sm-12">
+        <saved-results></saved-results>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import SavedResults from './components/SavedResults'
+import ResultBar from './components/ResultBar'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    SavedResults,
+    ResultBar
+  }
 }
 </script>
 
@@ -19,5 +36,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  max-width: 900px;
 }
 </style>
