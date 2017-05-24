@@ -53,8 +53,8 @@ const mutations = {
     })
     state.currentResult = resetCurrent()
   },
-  [DELETE_RESULT](state, resultId){
-    state.results = state.results.filter(r => r.id !== resultId)
+  [DELETE_RESULT](state, result){
+    state.results = state.results.filter(r => r.id !== result.id)
   },
   [UPDATE_CURRENT](state, current){
       if (typeof current === 'number' ||

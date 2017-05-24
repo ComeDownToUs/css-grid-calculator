@@ -1,11 +1,14 @@
-Save only works after clicking equals
-
 This was done up in approx 2-3 hours so there are defintely going to be holes in it.
 
+Run using `npm run dev`
+
+Tests may be added later as may the other functions
 
 
 
 
+
+Below is the Vue-cli automatically generated
 # vuex-grid-calculator
 
 > Testing the CSS grid with a bootstrap alternative

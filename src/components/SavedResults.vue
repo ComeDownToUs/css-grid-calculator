@@ -1,16 +1,17 @@
 <template>
   <div >
-    <div v-for="result in results" class="results">
-      <a href="#" class="result">
+    <div v-for="result in results" class="results row">
+      <a href="#" class="result col-xs-11">
         {{getDate(result.date)}}<br/>
         {{printSaved(result.calculation)}}
       </a>
+      <a href="#" class="col-xs-1" v-on:click.prevent="deleteRes(result)">X</a>
     </div>
   </div>
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
+import {mapGetters, mapActions} from 'vuex'
 import '../styles/grid.css'
 
 
@@ -27,6 +28,9 @@ export default {
     }
   },
   methods: {
+    ...mapActions([
+      'deleteResult'
+    ]),
     getDate(aDate){
       return dateFormat(aDate, "ddd, mmm dS, h:MM:ss TT");
     },
@@ -60,6 +64,9 @@ export default {
         }
       }
       return result
+    },
+    deleteRes(result){
+      this.deleteResult(result)
     }
   }
 }
@@ -68,11 +75,11 @@ export default {
 <style>
   .results{
     text-align: left;
-  }
-  .result{
-    color: #777;
     display: block;
     padding: 4px;
     border-bottom: 1px solid #999;
+  }
+  .result{
+    color: #777;
   }
 </style>
