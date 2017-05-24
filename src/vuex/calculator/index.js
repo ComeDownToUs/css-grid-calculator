@@ -37,7 +37,8 @@ const initialState = {
       date: Date()
     }
   ],
-  currentResult: resetCurrent()
+  currentResult: resetCurrent(),
+  status: ''
 }
 
 
@@ -67,13 +68,20 @@ const mutations = {
           state.currentResult.currentvalue = ''+current
         }
         state.currentResult.previous = 'numeric'
-      }else if(typeof current === 'string' && current !== '.'){
+        state.status = "Building entry"
+      }else if(typeof current === 'string' &&
+                      current !== '.' &&
+                      state.currentResult.currentvalue !== '' &&
+                      state.currentResult.currentvalue !== '.'){
         if(state.currentResult.previous === 'numeric'){
           state.currentResult.portions.push(state.currentResult.currentvalue)
         }
         state.currentResult.currentvalue = current
         //emit past entry
         state.currentResult.previous = 'operation'
+        state.status = 'Processed update operation'
+      }else{
+        state.status = "Invalid combination, order ignored"
       }
   },
   [CANCEL_RESULT](state){

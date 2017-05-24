@@ -107,8 +107,6 @@
 <script>
 import {mapGetters, mapActions} from 'vuex'
 
-//import '../styles/grid.css'
-
 export default {
   name: 'hello',
   computed: mapGetters({

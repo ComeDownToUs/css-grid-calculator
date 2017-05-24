@@ -15,6 +15,7 @@ Tests (there are some extremely basic nightwatch ones in place) may be added lat
 
 
 Some notes:
+- Save only works on a completed equation (i.e. the last button to be pressed was equals)
 - Tablet layout is the Bootstrap SM specs (768-992px)
 - Mobile is <768px
 - CSS Grid seemed the only way to do the layout without repeating parts, as its not fully supported, I made an alternative version of the layout using Bootstrap in case that was viewed as a cheat
