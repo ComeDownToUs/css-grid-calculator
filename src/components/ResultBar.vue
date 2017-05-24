@@ -1,6 +1,6 @@
 <template>
   <div class="current-sum">
-  {{this.displayValue()}}
+  {{ (this.displayValue() ==='')? 0 : this.displayValue()}}
   </div>
 </template>
 
