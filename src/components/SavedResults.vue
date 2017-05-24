@@ -1,10 +1,10 @@
 <template>
   <div >
     <div v-for="result in results" class="results row">
-      <a href="#" class="result col-xs-11">
+      <div class="result col-xs-11">
         {{getDate(result.date)}}<br/>
-        {{printSaved(result.calculation)}}
-      </a>
+        <em>{{printSaved(result.calculation)}}</em>
+      </div>
       <a href="#" class="col-xs-1" v-on:click.prevent="deleteRes(result)">X</a>
     </div>
   </div>
