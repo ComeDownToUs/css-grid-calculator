@@ -22,12 +22,12 @@ const initialState = {
   results: [
     {
       id: '6840a660-4036-11e7-a919-92ebcb67fe33',
-      calculation: [2, '+', 15, '*', 2],
+      calculation: [2, '+', 15, 'X', 2],
       date: Date()
     },
     {
       id: '6840a9da-4036-11e7-a919-92ebcb67fe33',
-      calculation: [2, '+', 15, '*', 2],
+      calculation: [2, '+', 15, 'X', 2],
       date: Date()
     },
 
