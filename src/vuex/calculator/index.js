@@ -80,6 +80,8 @@ const mutations = {
         //emit past entry
         state.currentResult.previous = 'operation'
         state.status = 'Processed update operation'
+      }else if(state.currentResult.previous === 'numeric' && state.currentResult.portions.length === 0 && current === '-'){
+        state.currentResult.currentvalue = current;
       }else{
         state.status = "Invalid combination, order ignored"
       }

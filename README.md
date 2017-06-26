@@ -1,4 +1,5 @@
 This was done up in approx 2-3 hours so there are defintely going to be holes in it.
+Please have a look at challenge_guidelines.png in the root of this repo to see guidelines for challenge
 
 Run using `npm run dev`
 

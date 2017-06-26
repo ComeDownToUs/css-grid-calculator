@@ -112,6 +112,11 @@
   content: 'CANCEL';
 }
 
+.status-grid{
+  text-align: left;
+  font-family: Courier, serif;
+}
+
 @media (max-width: 768px){
   .calculator{
     grid-template-columns: 33.33% 33.33% 33.33%;
@@ -149,3 +154,5 @@
     content: 'C';
   }
 }
+
+

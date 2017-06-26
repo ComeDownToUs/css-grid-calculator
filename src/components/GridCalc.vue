@@ -30,6 +30,9 @@
         Looking weird? If your browser doesn't support CSS Grid then try the Bootstrap version!
       </router-link>
     </div>
+    <div class="status-grid">
+      Status: {{status}}
+    </div>
   </div>
 </template>
 
@@ -41,7 +44,8 @@ import '../styles/grid.css'
 export default {
   name: 'hello',
   computed: mapGetters({
-    result: 'getCurrent'
+    result: 'getCurrent',
+    status: 'getStatus'
   }),
   methods: {
     ...mapActions([

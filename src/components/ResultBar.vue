@@ -34,14 +34,15 @@ export default {
       return result
     },
     displayValue(){
+      let result = this.getResult()
       if(this.result.currentvalue === '='){
-        return this.getResult()
+        return result
       }else if(
         this.result.currentvalue === '+' ||
         this.result.currentvalue === '-' ||
         this.result.currentvalue === '/' ||
         this.result.currentvalue === 'X'){
-        return (this.getResult() + "  " + this.result.currentvalue)
+        return (result + "  " + this.result.currentvalue)
       }
       return this.result.currentvalue
     }
